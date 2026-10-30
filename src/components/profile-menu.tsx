@@ -21,6 +21,7 @@ export function ProfileMenu() {
     setError("");
     try {
       await setFormat(f);
+      setOpen(false); // the new format shows at once; keep the menu open only if saving failed
     } catch (e) {
       setError((e as Error).message);
     }
